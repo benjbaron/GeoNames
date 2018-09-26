@@ -1,5 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
+body,html{
+    height:100%;
+}
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
 .aa-input-container {
   display: inline-block;
   position: relative; 
