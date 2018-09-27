@@ -4,7 +4,29 @@ body,html{
     height:100%;
 }
 
-#map { position:absolute; top:0; bottom:0; width:100%; }
+#map { 
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  width:100%; 
+}
+
+#title-anchor {
+  position:absolute; 
+  top:30px; 
+  width:100%; 
+}
+
+#title-anchor h1 {
+  display: inline;
+  color: #FFFFFF;
+  background-color:#000000;
+  font-weight: 800;
+  line-height: 170%;
+  padding: 0.2rem 0.5rem 0.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 
 .aa-input-container {
   display: inline-block;
@@ -14,7 +36,7 @@ body,html{
 .aa-input-search {
   width: 300px;
   padding: 12px 28px 12px 12px;
-  border: 2px solid #e4e4e4;
+  border: 3px solid #5468FF;
   border-radius: 4px;
   -webkit-transition: .2s;
   transition: .2s;
@@ -45,7 +67,7 @@ body,html{
   right: 16px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  fill: #e4e4e4; 
+  fill: #5468FF; 
 }
 
 .aa-hint {
