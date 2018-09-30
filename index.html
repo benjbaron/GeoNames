@@ -56,7 +56,7 @@
 
 	<script>
 		var client = algoliasearch('N3CD4LLDJP', 'a4741273f8f9925df313ae2bd90dd7b3');
-		var index = client.initIndex('getstarted_actors');
+		var index = client.initIndex('geonames');
 		// initialize autocomplete on search input (ID selector must match).
 		autocomplete('#aa-search-input',
 		{ hint: false }, {
@@ -67,6 +67,7 @@
 		    templates: {
 		        // 'suggestion' templating function used to render a single suggestion.
 		        suggestion: function(suggestion) {
+		          console.log(suggestion);
 		          return '<span>' +
 		            suggestion._highlightResult.name.value + '</span>';
 		        }
