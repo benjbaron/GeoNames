@@ -59,6 +59,17 @@
 		var index = client.initIndex('geonames');
 		var currentCoordinates = [48.880388, 2.326423];
 		var results = [];
+
+		function showResult(suggestion) {
+			if (suggestion.admin1) {
+            	return '<span>' +
+              		suggestion._highlightResult.name.value + ', ' + suggestion.admin1 + ', ' + suggestion.cc + '</span>';
+            }
+
+        	return '<span>' +
+          		suggestion._highlightResult.name.value + ', ' + suggestion.cc + '</span>';
+		}
+
 		// initialize autocomplete on search input (ID selector must match).
 		autocomplete('#aa-search-input',
 		{ hint: false }, [
@@ -77,8 +88,7 @@
 			    templates: {
 			        // 'suggestion' templating function used to render a single suggestion.
 			        suggestion: function(suggestion) {
-			          return '<span>' +
-			            suggestion._highlightResult.name.value + ', ' + suggestion.admin1 + '</span>';
+			        	return showResult(suggestion);
 			        }
 			    }
 			},
@@ -97,8 +107,7 @@
 			    templates: {
 			        // 'suggestion' templating function used to render a single suggestion.
 			        suggestion: function(suggestion) {
-			          return '<span>' +
-			            suggestion._highlightResult.name.value + ', ' + suggestion.admin1 + '</span>';
+			            return showResult(suggestion);
 			        }
 			    }
 			}
