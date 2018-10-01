@@ -57,12 +57,14 @@
 	<script>
 		var client = algoliasearch('N3CD4LLDJP', 'a4741273f8f9925df313ae2bd90dd7b3');
 		var index = client.initIndex('geonames');
+		var results = [];
 		// initialize autocomplete on search input (ID selector must match).
 		autocomplete('#aa-search-input',
 		{ hint: false }, [
 			 {
 			    source: function(query, callback) {
 				  index.search(query, { hitsPerPage: 2, aroundLatLngViaIP: true}).then(function(answer) {
+				  	results = answer.hits.map(x => x.geonameid);
 				    callback(answer.hits);
 				  }, function() {
 				    callback([]);
@@ -75,14 +77,15 @@
 			        // 'suggestion' templating function used to render a single suggestion.
 			        suggestion: function(suggestion) {
 			          return '<span>' +
-			            suggestion._highlightResult.name.value + '</span>';
+			            suggestion._highlightResult.name.value + ', ' + suggestion.admin1 + '</span>';
 			        }
 			    }
 			},
 			{
 			    source: function(query, callback) {
-				  index.search(query, { hitsPerPage: 3}).then(function(answer) {
-				    callback(answer.hits);
+				  index.search(query, { hitsPerPage: 5}).then(function(answer) {
+				  	var hits = answer.hits.filter(x => !results.includes(x.geonameid));
+				    callback(hits.slice(0, 5-results.length));
 				  }, function() {
 				    callback([]);
 				  });
@@ -94,7 +97,7 @@
 			        // 'suggestion' templating function used to render a single suggestion.
 			        suggestion: function(suggestion) {
 			          return '<span>' +
-			            suggestion._highlightResult.name.value + '</span>';
+			            suggestion._highlightResult.name.value + ', ' + suggestion.admin1 + '</span>';
 			        }
 			    }
 			}
