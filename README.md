@@ -1,4 +1,4 @@
-# GeoNames-Cities
+# GeoNames city search
 
 This project is a city search service powered by Algolia using gazetteer data from [GeoNames](https://www.geonames.org/). This document details the rationale behind the designa and implementation of the city search service. The url of this service is the following: https://benjbaron.github.io/GeoNames/. The page shows a search input, just start typing the name of a city and the search box will automatically suggest relevant cities.
 
