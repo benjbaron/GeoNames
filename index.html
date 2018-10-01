@@ -38,7 +38,7 @@
 
   	<div id="map"></div>
   	<div id="title-anchor">
-  		<h1>GeoNames<br/>City Search</h1>
+  		<h1 class="highlight">GeoNames<br/>City Search</h1>
   	</div>
 
   	<div class="container h-100">
@@ -57,13 +57,14 @@
 	<script>
 		var client = algoliasearch('N3CD4LLDJP', 'a4741273f8f9925df313ae2bd90dd7b3');
 		var index = client.initIndex('geonames');
+		var currentCoordinates = [48.880388, 2.326423];
 		var results = [];
 		// initialize autocomplete on search input (ID selector must match).
 		autocomplete('#aa-search-input',
 		{ hint: false }, [
 			 {
 			    source: function(query, callback) {
-				  index.search(query, { hitsPerPage: 2, aroundLatLngViaIP: true}).then(function(answer) {
+				  index.search(query, { hitsPerPage: 2, aroundLatLng: currentCoordinates.join(',')}).then(function(answer) {
 				  	results = answer.hits.map(x => x.geonameid);
 				    callback(answer.hits);
 				  }, function() {
@@ -111,8 +112,12 @@
 		var map = new mapboxgl.Map({
 		    container: 'map', // container id.
 		    style: 'mapbox://styles/mapbox/outdoors-v9', //stylesheet location.
-		    center: [2.326423, 48.880388], // starting position.
+		    center: currentCoordinates.reverse(), // starting position.
 		    zoom: 13 // starting zoom.
+		});
+
+		map.on('moveend', function(event) {
+			currentCoordinates = [map.getCenter().lat, map.getCenter().lng];
 		});
 	</script>
   </body>
