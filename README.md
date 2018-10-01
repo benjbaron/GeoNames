@@ -46,7 +46,7 @@ Without loss of generality, we aim to match the postal codes features with a sin
 **Problem with the administrative codes.** Features in both datasets are associated to several hierarchical administrative areas of varying sizes. For instance, Paris 08 (75008) is in the country France of code FR, the first-level administrative area 11 (Île-de-France), the second-level administrative area 75 (Paris), and the third-level administrative area 751 (Paris). However, while the administrative codes given in both datasets may match for certain countries such as France, they do not necessarly match for other countries such as Mexico, see for instance this instance for [Tampico, Mexico](https://en.wikipedia.org/wiki/Tampico).
 
 ```
-GeoNames dataset.
+Postal Codes dataset.
 +---+---+---+--------------+-------+--------+-----+
 |AC1|AC2|AC3|          NAME|    LAT|     LON|   PC|
 +---+---+---+--------------+-------+--------+-----+
@@ -56,7 +56,7 @@ GeoNames dataset.
 ```
 
 ```
-Postal Codes dataset.
+GeoNames dataset.
 +---+---+----+-------+--------+--------+-------+
 |AC1|AC2| AC3|   NAME|     LAT|     LON|   GNID|
 +---+---+----+-------+--------+--------+-------+
