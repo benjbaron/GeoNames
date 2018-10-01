@@ -1,0 +1,253 @@
+AD	^AD\d{3}$
+AE	
+AF	^\d{4}$
+AG	
+AI	^AI-2640$
+AL	^\d{4}$
+AM	^\d{4}$
+AN	
+AO	
+AQ	^BIQQ 1ZZ$
+AR	^\d{4}$
+AS	^\d{5}(\-\d{5})?$
+AT	^\d{4}$
+AU	^\d{4}$
+AW	
+AX	^(AX\-)?\d{5}$
+AZ	^AZ\s\d{5}$
+BA	^\d{4}$
+BB	^CC\d{5}$
+BD	^\d{4}$
+BE	^\d{4}$
+BF	
+BG	^\d{4}$
+BH	^\d?\d{3}$
+BI	
+BJ	
+BL	^97133$
+BM	
+BN	^\w{2}\d{4}$
+BO	
+BQ	
+BR	^\d{5}(\-\d{3})?$
+BS	
+BT	^\d{5}$
+BV	
+BW	
+BY	^\d{6}$
+BZ	
+CA	^\w\d\w\s?\d?\w?\d?$
+CC	^\d{4}$
+CD	
+CF	
+CG	
+CH	^\d{4}$
+CI	
+CK	
+CL	^\d{3}\-?\d{4}$
+CM	
+CN	^\d{6}$
+CO	^\d{6}$
+CR	^\d{5}$
+CS	
+CU	^\d{5}$
+CV	^\d{4}$
+CW	
+CX	^\d{4}$
+CY	^\d{4}$
+CZ	^\d{3}\s?\d{2}$	
+DE	^\d{2}(\d{2})?\d?$
+DJ	
+DK	^\d{4}$
+DM	
+DO	^\d{5}$
+DZ	^\d{5}$
+EC	^\d{6}$
+EE	^\d{5}$
+EG	^\d{5}$
+EH	
+ER	
+ES	^\d{5}$
+ET	^\d{4}$
+FI	^\d{5}$
+FJ	
+FK	^FIQQ 1ZZ$
+FM	^\d{5}(\-\d{5})?$
+FO	^\d{3}$
+FR	^\d{5}$
+GA	
+GB	^\w\w?\d(\d|\w)?$
+GD	
+GE	^\d{4}$
+GF	^973\d{2}$
+GG	^GY\d\d?(\s\d\w{2})?$
+GH	
+GI	^GX11 1AA$
+GL	^\d{4}$
+GM	
+GN	^\d{3}$
+GP	^971\d{2}$
+GQ	
+GR	^\d{3}\s\d{2}$
+GS	^SIQQ 1ZZ$
+GT	^\d{5}$
+GU	^\d{5}(\-\d{4})?$
+GW	^\d{4}$
+GY	
+HK	
+HM	
+HN	^(\w{2}|\d)\d{4}$
+HR	^\d{5}$
+HT	^\d{4}$
+HU	^\d{4}$
+ID	^\d{5}$
+IE	
+IL	^\d{7}$
+IM	^IM\d\d?(\s\d\w{2})?$
+IN	^\d{3}\s?\d{3}$
+IO	^BBND 1ZZ$
+IQ	^\d{5}$
+IR	^\d{10}$
+IS	^\d{3}$
+IT	^\d{5}$
+JE	^JE\d\d?(\s\d\w{2})?$
+JM	^\d{2}$
+JO	^\d{5}$
+JP	^\d{3}\-\d{4}$
+KE	^\d{5}$
+KG	^\d{6}$
+KH	
+KI	
+KM	
+KN	
+KP	
+KR	^\d{3}\-?\d{2}\d?$
+KW	^\d{5}$
+KY	^KY\d\-\d{4}$
+KZ	^\d{6}$
+LA	^\d{5}$
+LB	^\d{4}\s?\d(\d{3})?$
+LC	^LC\d{2}\s?\s?\d{3}$
+LI	^\d{4}$
+LK	^\d{5}$
+LR	^\d{4}$
+LS	^\d{3}$
+LT	^(LT)?\-?\d{5}$
+LU	^L?\-?\d{4}$
+LV	^LV\-\d{4}$
+LY	
+MA	^\d{5}$
+MC	^(MC)?980\d{2}$
+MD	^MD\-?\d{4}$
+ME	^\d{5}$
+MF	^97150$
+MG	^\d{3}$
+MH	^\d{5}(\-\d{4})?$
+MK	^\d{4}$
+ML	
+MM	^\d{5}$
+MN	^\d{5}$
+MO	
+MP	^\d{5}(\-\d{4})?$
+MQ	^972\d{2}$
+MR	
+MS	^MSR\s1110\-1350$
+MT	^\w{3}\s?(\d{4})?$
+MU	^\d{5}$
+MV	^\d{5}$
+MW	
+MX	^\d{5}$
+MY	^\d{5}$
+MZ	^\d{4}$
+NA	
+NC	^988\d{2}$
+NE	^\d{4}$
+NF	^\d{4}$
+NG	^\d{6}$
+NI	^\d{5}$
+NL	
+NO	^\d{4}$
+NP	^\d{5}$
+NR	
+NU	
+NZ	^\d{4}$
+OM	^\d{3}$
+PA	^\d{4}$
+PE	^(PE)?\s?\d?\d{4}$
+PF	^987\d{2}$
+PG	^\d{3}$
+PH	^\d{4}$
+PK	^\d{5}$
+PL	^\d{2}\-?\d{3}$
+PM	^97500$
+PN	^PCRN\s?1ZZ$
+PR	^\d{5}(\-\d{4})?$
+PS	^\d{3}$
+PT	^\d{4}\-?\d{3}?$
+PW	^\d{5}(\-\d{4})?$
+PY	^\d{4}$
+QA	
+RE	^974\d{2}$
+RO	^\d{6}$
+RS	^\d{5}$
+RU	^\d{6}$
+RW	
+SA	^\d{5}(\-\d{4})?$
+SB	
+SC	
+SD	^\d{5}$
+SE	^\d{3}\s?\d{2}$
+SG	^\d{2}(\d{2})?(\d{2})?$
+SH	^\w{4}\s?1ZZ$
+SI	^(SI)?\-?\d{4}$
+SJ	^\d{4}$
+SK	^\d{3}\s?\d{2}$
+SL	
+SM	^4789\d$
+SN	^\d{5}$
+SO	^\w{2}\s?\d{5}$
+SR	
+SS	
+ST	
+SV	^\d{4}$
+SX	
+SY	
+SZ	^\w\d{4}$	
+TC	^TKCA\s?1ZZ$
+TD	
+TF	
+TG	
+TH	^\d{5}$
+TJ	^\d{6}$
+TK	
+TL	
+TM	^\d{6}$
+TN	^\d{4}$
+TO	
+TR	^\d{5}$
+TT	^\d{6}$
+TV	
+TW	^\d{3}\-?(\d{2})?$
+TZ	^\d{5}$
+UA	^\d{5}$
+UG	
+UM	
+US	^\d{5}(\-\d{4})?$
+UY	^\d{5}$
+UZ	^\d{6}$
+VA	^00120$
+VC	^VC\d{4}$
+VE	^\d{4}\-?\w?$
+VG	^VG\d{4}$
+VI	^\d{5}(\-\d{4})?$
+VN	^\d{6}$
+VU	
+WF	^986\d{2}$
+WS	^WS\d{4}$
+XK	^\d{5}$
+YE	
+YU	
+YT	^976\d{2}$
+ZA	^\d{4}$
+ZM	^\d{5}$
+ZW	
