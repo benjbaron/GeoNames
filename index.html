@@ -59,20 +59,46 @@
 		var index = client.initIndex('geonames');
 		// initialize autocomplete on search input (ID selector must match).
 		autocomplete('#aa-search-input',
-		{ hint: false }, {
-		    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-		    // value to be displayed in input control after user's suggestion selection.
-		    displayKey: 'name',
-		    // hash of templates used when rendering dataset.
-		    templates: {
-		        // 'suggestion' templating function used to render a single suggestion.
-		        suggestion: function(suggestion) {
-		          console.log(suggestion);
-		          return '<span>' +
-		            suggestion._highlightResult.name.value + '</span>';
-		        }
-		    }
-		});
+		{ hint: false }, [
+			 {
+			    source: function(query, callback) {
+				  index.search(query, { hitsPerPage: 2, aroundLatLngViaIP: true}).then(function(answer) {
+				    callback(answer.hits);
+				  }, function() {
+				    callback([]);
+				  });
+				},
+			    // value to be displayed in input control after user's suggestion selection.
+			    displayKey: 'name',
+			    // hash of templates used when rendering dataset.
+			    templates: {
+			        // 'suggestion' templating function used to render a single suggestion.
+			        suggestion: function(suggestion) {
+			          return '<span>' +
+			            suggestion._highlightResult.name.value + '</span>';
+			        }
+			    }
+			},
+			{
+			    source: function(query, callback) {
+				  index.search(query, { hitsPerPage: 3}).then(function(answer) {
+				    callback(answer.hits);
+				  }, function() {
+				    callback([]);
+				  });
+				},
+			    // value to be displayed in input control after user's suggestion selection.
+			    displayKey: 'name',
+			    // hash of templates used when rendering dataset.
+			    templates: {
+			        // 'suggestion' templating function used to render a single suggestion.
+			        suggestion: function(suggestion) {
+			          return '<span>' +
+			            suggestion._highlightResult.name.value + '</span>';
+			        }
+			    }
+			}
+		]);
 
 		mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuc2xrIiwiYSI6ImVacUt6TzAifQ.Unm87871efLpgpZ3eLMe9g';
 
