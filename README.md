@@ -94,11 +94,11 @@ According to [the documentation](https://www.algolia.com/doc/guides/searching/ge
 
 > The ranking formula contains a Geo criterion which by default is the second ranking criteria in the formula. This criterion is only effective when records contain the `_geoloc` attribute with the corresponding lat and lng properties. Results will be ranked by distance, from the closest to the farthest based on a point of reference.
 
-When a user starts to type the name of a city, we perform two simultaneous searches : 
- - The two first autocomplete results are local using Algolia's [geo search](https://www.algolia.com/doc/guides/searching/geo-search/) around the location given by the user's IP address, using the [`aroundLatLngViaIP`](https://www.algolia.com/doc/api-reference/api-parameters/aroundLatLngViaIP/) search attribute. The results of the search will then be loacl to the user's current location (actually, their IP location which has [various levels of accuracy](https://www.maxmind.com/en/geoip2-city-accuracy-comparison)).
- - The three last autocomplete results are global using standard search with the ranking based on the decreasing population of the matching cities.
+In the web client, when a user starts to type the name of a city, we perform two simultaneous searches : 
+ - The two first autocomplete results are local using Algolia's [geo search](https://www.algolia.com/doc/guides/searching/geo-search/) around the location given by the current view of the map behind the search box, using the [`aroundLatLng`](https://www.algolia.com/doc/api-reference/api-parameters/aroundLatLng/) search attribute. The results of the search will then be local to the location of current map view. The local search results adapt with the current map view, whether the user selects a place or pans the map.
+ - The three last autocomplete results are global using standard search with the ranking based on the decreasing population of the matching cities. Among these results, we filter those are are already returned by the first local search query.
 
-The two searches are performed simultaneously by Javascript client with different search arguments.
+The two searches are performed simultaneously by Javascript client with different search arguments. The user can then select a place and the map behind the search box will move to the selected city.
 
 
 ## Discussions
