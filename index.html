@@ -113,7 +113,7 @@
 			}
 		]).on('autocomplete:selected', function(event, suggestion, dataset) {
 			var coordinates = [suggestion._geoloc.lng, suggestion._geoloc.lat];
-			map.flyTo({center: coordinates, zoom: 9, bearing: 0, speed: 2, curve: 1});
+			map.flyTo({center: coordinates, zoom: 13, bearing: 0, speed: 2, curve: 1});
 		});
 
 		mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuc2xrIiwiYSI6ImVacUt6TzAifQ.Unm87871efLpgpZ3eLMe9g';
