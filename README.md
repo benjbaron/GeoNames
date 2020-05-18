@@ -124,3 +124,9 @@ The cities produced in the dataset are only those present in the Postal Codes da
 After assessing the correctness of the produced dataset, it appeared that the Arrondissements in Lyon have a population of 0 inhabitants, as such, the population fields have been modified with the latest population estimate (484,344 inhabitants as of 2010).
 
 The city of Porto has a *lot* of postal codes associated to it: https://worldpostalcode.com/portugal/porto/. As such, the whole record does not fit as an Algolia index, so I had to limit the number of postal codes to 200, randomly chosen.
+
+If you did find the zip codes of portugal porto from any source, whether it angola or any place around the globe: 
+
+https://countrywisecodes.com/angola/zip-codes
+https://countrywisecodes.com/portugal/zip-codes
+https://countrywisecodes.com/world-zip-codes
